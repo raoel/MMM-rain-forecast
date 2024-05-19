@@ -83,7 +83,7 @@ Module.register("MMM-rain-forecast",{
         // loop through the received data array raining[] normally 24 position 0 to 23
         for (i=0;i<raining.length;i++){
             xAs=Math.round(i*(300/(raining.length-1)));
-            setPoints += xAs + ',' + (100-(raining[i]*multiplyOriginal)) + ' ';
+            setPoints += xAs + ',' + (100-(raining[i]*this.config.multiplyOriginal)) + ' ';
         }
         // End of th3 line make sure it drops to the bottom of the canvas to avoid silly fill
         setPoints +='L' + xAs + ',100 Z';
